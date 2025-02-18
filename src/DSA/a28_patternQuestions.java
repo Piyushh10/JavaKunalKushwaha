@@ -1,3 +1,5 @@
+package DSA;
+
 public class a28_patternQuestions {
     public static void main(String[] args) {
         /*
