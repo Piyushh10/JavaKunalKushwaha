@@ -7,6 +7,8 @@ public class a31_quickSort {
         int [] arr = {100, 101, 169, 201, 2, 6, 8, 9, 10};
         sort(arr, 0, arr.length-1);
         System.out.println(Arrays.toString(arr));
+
+        a32_linkedlist list = new a32_linkedlist();
     }
     static void sort(int [] nums, int low, int high){
         if(low >= high){
