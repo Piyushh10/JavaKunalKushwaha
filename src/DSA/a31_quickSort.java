@@ -9,6 +9,11 @@ public class a31_quickSort {
         System.out.println(Arrays.toString(arr));
 
         a32_linkedlist list = new a32_linkedlist();
+        list.insertAtFirst(1);
+        list.insertAtFirst(6);
+        list.insertAtFirst(12);
+        list.insertAtFirst(18);
+        list.display();
     }
     static void sort(int [] nums, int low, int high){
         if(low >= high){

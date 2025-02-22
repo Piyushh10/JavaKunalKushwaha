@@ -12,7 +12,7 @@ public class a32_linkedlist {
         this.size = 0;
     }
 
-    public void insertFirst(int val){
+    public void insertAtFirst(int val){
         Node node = new Node(val);
         node.next = head;
         head = node;
@@ -20,6 +20,15 @@ public class a32_linkedlist {
             tail = head;
         }
         size++;
+    }
+
+    public void display(){
+        Node temp = head;
+        while(temp != null){
+            System.out.print(temp.value + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("END");
     }
 
     private class Node{
@@ -36,3 +45,6 @@ public class a32_linkedlist {
         }
     }
 }
+
+
+// Check a31_quickSort.java for linkedlist implementation
