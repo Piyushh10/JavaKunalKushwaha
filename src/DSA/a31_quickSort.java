@@ -12,6 +12,7 @@ public class a31_quickSort {
         list.insertAtFirst(1);
         list.insertAtFirst(6);
         list.insertAtFirst(12);
+        list.insertAtEnd(999);
         list.insertAtFirst(18);
         list.display();
     }

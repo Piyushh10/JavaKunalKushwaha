@@ -22,6 +22,30 @@ public class a32_linkedlist {
         size++;
     }
 
+    public void insertAtEnd(int val){
+        if (tail == null){
+            insertAtFirst(val);
+            return;
+        }
+        Node node = new Node(val);
+        tail.next = node;
+        tail = node;
+        size++;
+    }
+
+    public void insert(int val, int index){
+        if(index == 0){
+            insertAtFirst(val);
+            return;
+        }
+        if(index == size){
+            insertAtEnd(val);
+            return;
+        }
+         Node temp = head;
+
+    }
+
     public void display(){
         Node temp = head;
         while(temp != null){
