@@ -14,6 +14,13 @@ public class a31_quickSort {
         list.insertAtFirst(12);
         list.insertAtEnd(999);
         list.insertAtFirst(18);
+        list.insert(69, 2);
+        list.display();
+        System.out.println(list.deleteFirst());
+        list.display();
+        System.out.println(list.deleteLast());
+        list.display();
+        System.out.println(list.delete(2));
         list.display();
     }
     static void sort(int [] nums, int low, int high){
