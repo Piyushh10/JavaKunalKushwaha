@@ -94,6 +94,17 @@ public class a32_linkedlist {
         return node;
     }
 
+    public Node find(int value) {
+        Node node = head;
+        while (node != null) {
+            if (node.value == value) {
+                return node;
+            }
+            node = node.next;
+        }
+        return null;
+    }
+
     public void display(){
         Node temp = head;
         while(temp != null){

@@ -22,6 +22,7 @@ public class a31_quickSort {
         list.display();
         System.out.println(list.delete(2));
         list.display();
+
     }
     static void sort(int [] nums, int low, int high){
         if(low >= high){
