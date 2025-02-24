@@ -29,19 +29,21 @@ public class a33_DLL {
         node.prev = last;
     }
 
-    public void insert(int after, int index){
+    public void insert(int after, int val){
         Node p = find(after);
 
-
-
-        /*
-         Node temp = head;
-        for (int i = 1; i < index; i++) {
-            temp = temp.next;
+        if(p == null){
+            System.out.println("Does not exist");
+            return;
         }
-        Node node = new Node(val, temp.next);
-        temp.next = node;
-         */
+
+        Node node = new Node(val);
+        node.next = p.next;
+        p.next = node;
+        node.prev = p;
+        if(node.next != null){
+            node.next.prev = node;
+        }
     }
 
     public Node find(int value) {
