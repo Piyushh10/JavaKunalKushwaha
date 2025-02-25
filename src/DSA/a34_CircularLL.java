@@ -23,7 +23,36 @@ public class a34_CircularLL {
     }
 
     public void display(){
+        Node node = head;
+        if(head != null){
+            do{
+                System.out.println(node.val + " -> ");
+                node = node.next;
+            } while(node != head);
+        }
+        System.out.println("HEAD");
+    }
 
+    public void delete(int val){
+        Node node = head;
+        if(node == null){
+            return;
+        }
+
+        if(node.val == val){
+            head = head.next;
+            tail.next = head;
+            return;
+        }
+
+        do{
+            Node n = node.next;
+            if(n.val == val){
+                node.next = n.next;
+                break;
+            }
+            node = node.next;
+        } while(node != head);
     }
 
     private class Node{
