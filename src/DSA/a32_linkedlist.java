@@ -83,7 +83,6 @@ public class a32_linkedlist {
         int val = prev.next.value;
         prev.next = prev.next.next;
         return val;
-
     }
 
     public Node get(int index){
