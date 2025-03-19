@@ -48,11 +48,27 @@ public class a37_binarytrees {
             node.right = new Node(value);
             populate(sc, node.right);
         }
-
-
-
     }
 
+    public void displayTree(){
+        displayTree(root, "");
+    }
+
+    private void displayTree(Node node, String indent){
+        if(node ==  null){
+            return;
+        }
+        System.out.println(indent+node.value);
+        displayTree(node.left, indent+"\t");
+        displayTree(node.right, indent+"\t");
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        a37_binarytrees tree = new a37_binarytrees();
+        tree.populate(sc);
+        tree.displayTree();
+    }
 }
 
 
