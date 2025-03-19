@@ -17,6 +17,7 @@ public class a36_queue {
 
         //Returns head of the queue, if empty then returns null
         System.out.println(queue.peek());
+
         System.out.println(queue.remove());
         System.out.println(queue.remove()+"\n");
 
