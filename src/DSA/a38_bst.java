@@ -65,8 +65,20 @@ public class a38_bst {
             node.right = insert(value, node.right);
         }
 
-        node.height = Math.max(height(node.right), height(node.right))+1;
+        node.height = Math.max(height(node.right), height(node.left))+1;
 
         return node;
+    }
+
+    public boolean balanced(){
+        return balanced(root);
+
+    }
+
+    public boolean balanced(Node node){
+        if(node == null){
+            return true;
+        }
+        return Math.abs(height(node.left) - height(node.right)) <= 1;
     }
 }
