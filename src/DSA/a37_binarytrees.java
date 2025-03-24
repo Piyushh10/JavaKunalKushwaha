@@ -4,7 +4,7 @@ package DSA;
 import java.util.Scanner;
 
 //its  a simple binary tree, not BST
-public class a37_binarytrees {
+public class  a37_binarytrees {
 
     public a37_binarytrees() {
 
@@ -91,6 +91,47 @@ public class a37_binarytrees {
             System.out.println(node.value);
         }
         prettyDisplay(node.left, level+1);
+    }
+
+    public void preOrder(){
+        preOrder(root);
+    }
+
+    private void preOrder(Node node){
+        if (node == null){
+            return;
+        }
+
+        System.out.print(node.value+" ");
+        preOrder(node.left);
+        preOrder(node.right);
+    }
+
+    public void inOrder(){
+        inOrder(root);
+    }
+
+    private void inOrder(Node node){
+        if (node == null){
+            return;
+        }
+        preOrder(node.left);
+        System.out.print(node.value+" ");
+        preOrder(node.right);
+    }
+
+    public void postOrder(){
+        preOrder(root);
+    }
+
+    private void postOrder(Node node){
+        if (node == null){
+            return;
+        }
+
+        preOrder(node.left);
+        preOrder(node.right);
+        System.out.print(node.value+" ");
     }
 }
 

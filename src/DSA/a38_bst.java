@@ -70,15 +70,21 @@ public class a38_bst {
         return node;
     }
 
+    public void populate(int [] num){
+        for(int i : num) {
+            this.insert(i);
+        }
+    }
+
     public boolean balanced(){
         return balanced(root);
 
     }
 
-    public boolean balanced(Node node){
+    private boolean balanced(Node node){
         if(node == null){
             return true;
         }
-        return Math.abs(height(node.left) - height(node.right)) <= 1;
+        return Math.abs(height(node.left) - height(node.right)) <= 1 && balanced(node.right) && balanced(node.left);
     }
 }
