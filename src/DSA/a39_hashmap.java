@@ -1,15 +1,13 @@
 package DSA;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.TreeMap;
+import java.util.*;
 
 public class a39_hashmap {
     public static void main(String[] args) {
         HashMap<String, Integer> map = new HashMap<>();
-        map.put("mia khalifa", 69);
-        map.put("mia malkova", 6969);
-        map.put("lena paul", 696969);
+        map.put("huihui", 69);
+        map.put("khikhi", 6969);
+        map.put("huehue", 696969);
 
         System.out.println(map.get("lena paul"));
 //check other functions
