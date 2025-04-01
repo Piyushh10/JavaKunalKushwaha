@@ -63,8 +63,8 @@ public class a41_heap<T extends Comparable<T>> {
             throw new Exception("You are trying to remove from" +
                     "an empty heap!");
         }
-        T temp = list.get(0);
-        T last = list.remove(list.size() - 1);
+        T temp = list.getFirst();
+        T last = list.removeLast();
         if(!list.isEmpty()){
             list.set(0, last);
             downheap(0);
