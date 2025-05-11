@@ -7,17 +7,20 @@ public class a46_dp {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int [] dp = new int[n+1];
-        Arrays.fill(dp, -1);
-        System.out.println(f(n, dp));
-    }
-    public static int f(int n, int[]dp){
-        if(n<=1){
-            return n;
-        } if(dp[n] != -1){
-            return dp[n];
+        int prev2 = 0, prev1 = 1;
+        for (int i = 2; i < n+1; i++) {
+            int curri = prev1 + prev2;
+            prev2 = prev1;
+            prev1 = curri;
         }
-        return dp[n] = f(n-1,dp) + f(n-2, dp);
+        System.out.println(prev1);
     }
-
+//    public static int f(int n, int[]dp){
+//        if(n<=1){
+//            return n;
+//        } if(dp[n] != -1){
+//            return dp[n];
+//        }
+//        return dp[n] = f(n-1,dp) + f(n-2, dp);
+//    }
 }
